@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{39E1C571-0226-41A3-B74E-74F9445E65CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.API", "Presentation\WizardAi.API\WizardAi.API.csproj", "{60E27A3E-BB2B-4486-8D14-B490B64477A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9FCE74A3-70E1-4096-BB1B-FB26F56B26FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F94B7E8F-E5BA-4C45-A494-154B8DE7C9B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.Core", "Core\WizardAi.Core\WizardAi.Core.csproj", "{73291F67-0610-475D-B1CE-016C6C5C73C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.Data", "Data\WizardAi.Data\WizardAi.Data.csproj", "{92DBB6B6-CC9B-405D-A679-BFF19D80633B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{999073D9-E7E9-4315-9A3B-6B1E0ED2D46A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.Service", "Service\WizardAi.Service\WizardAi.Service.csproj", "{42F9D584-53E5-4AAB-8198-35BB709853A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60E27A3E-BB2B-4486-8D14-B490B64477A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E27A3E-BB2B-4486-8D14-B490B64477A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E27A3E-BB2B-4486-8D14-B490B64477A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E27A3E-BB2B-4486-8D14-B490B64477A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73291F67-0610-475D-B1CE-016C6C5C73C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73291F67-0610-475D-B1CE-016C6C5C73C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73291F67-0610-475D-B1CE-016C6C5C73C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73291F67-0610-475D-B1CE-016C6C5C73C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92DBB6B6-CC9B-405D-A679-BFF19D80633B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92DBB6B6-CC9B-405D-A679-BFF19D80633B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92DBB6B6-CC9B-405D-A679-BFF19D80633B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92DBB6B6-CC9B-405D-A679-BFF19D80633B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F9D584-53E5-4AAB-8198-35BB709853A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F9D584-53E5-4AAB-8198-35BB709853A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F9D584-53E5-4AAB-8198-35BB709853A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F9D584-53E5-4AAB-8198-35BB709853A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60E27A3E-BB2B-4486-8D14-B490B64477A8} = {39E1C571-0226-41A3-B74E-74F9445E65CF}
+		{73291F67-0610-475D-B1CE-016C6C5C73C8} = {9FCE74A3-70E1-4096-BB1B-FB26F56B26FD}
+		{92DBB6B6-CC9B-405D-A679-BFF19D80633B} = {F94B7E8F-E5BA-4C45-A494-154B8DE7C9B6}
+		{42F9D584-53E5-4AAB-8198-35BB709853A8} = {999073D9-E7E9-4315-9A3B-6B1E0ED2D46A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB893481-856A-4E25-A890-C03FF616B948}
+	EndGlobalSection
+EndGlobal
