@@ -21,6 +21,8 @@ namespace WizardAi.Service.CQRS.Completion.Queries.FullTextCompletion
 
         public CreativityType CreativityType { get; set; }
 
+        public LanguageType LanguageType { get; set; }
+
         public int RequestedOption { get; set; } = 3;
     }
 }

@@ -5,7 +5,7 @@ namespace WizardAi.Core.Enums
     public enum PromptType
     {
         [Display(Name = "Açıklama")]
-        None = 0,// anything
+        None = 0,
         
         [Display(Name = "Makale")]
         Article = 1,

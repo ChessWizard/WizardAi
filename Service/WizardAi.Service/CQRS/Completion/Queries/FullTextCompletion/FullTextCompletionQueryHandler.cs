@@ -31,6 +31,7 @@ namespace WizardAi.Service.CQRS.Completion.Queries.FullTextCompletion
                 .SetDescription(request.Description)
                 .SetPromptType(request.PromptType)
                 .SetWordCount(request.WordCount)
+                .SetLanguageType(request.LanguageType)
                 .Build();
 
             var completionRequest = CompletionHelper.GenerateCompletionRequestByCreativity(request.CreativityType, prompt);

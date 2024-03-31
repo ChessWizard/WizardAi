@@ -19,14 +19,13 @@ namespace WizardAi.Core.Helpers
         /// <returns></returns>
         public static CompletionRequest GenerateCompletionRequestByCreativity(CreativityType creativityType, string prompt, int maxTokens = 1000)
         {
-            var (Temperature, TopP, FrequencyPenalty, PresencePenalty) = GetCreativitySettings(creativityType);
+            var (Temperature, FrequencyPenalty, PresencePenalty) = GetCreativitySettings(creativityType);
 
             CompletionRequest completionRequest = new()
             {
                 Model = OpenAI_API.Models.Model.ChatGPTTurboInstruct,
                 MaxTokens = maxTokens,
                 Temperature = Temperature,
-                TopP = TopP,
                 FrequencyPenalty = FrequencyPenalty,
                 PresencePenalty = PresencePenalty,
                 Prompt = prompt
@@ -35,14 +34,14 @@ namespace WizardAi.Core.Helpers
             return completionRequest;
         }
 
-        private static (double Temperature, double TopP, double FrequencyPenalty, double PresencePenalty) GetCreativitySettings(CreativityType creativityType)
+        private static (double Temperature, double FrequencyPenalty, double PresencePenalty) GetCreativitySettings(CreativityType creativityType)
         {
             return creativityType switch
             {
-                CreativityType.Basic => (0.3, 1, 0, 0),
-                CreativityType.Advanced => (0.7, 0.9, 0.2, 0.2),
-                CreativityType.Creative => (0.9, 0.9, 0.5, 0.5),
-                _ => (0.5, 1, 0, 0),
+                CreativityType.Basic => (0.3, 0, 0),
+                CreativityType.Advanced => (0.7, 0.2, 0.2),
+                CreativityType.Creative => (1.2, 0.5, 0.5),
+                _ => (0.5, 0, 0),
             };
         }
     }
