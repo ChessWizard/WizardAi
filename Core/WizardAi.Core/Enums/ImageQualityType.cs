@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 
 namespace WizardAi.Core.Enums
 {
-    public enum LanguageType
+    public enum ImageQualityType
     {
-        [Display(Name = "Türkçe")]
-        TR = 1,
-
-        [Display(Name = "English")]
-        US = 2
+        Standard = 1,// DALL-E 2 ve DALL-E 3'de
+        HD = 2// DALL-E 3 de
     }
 }

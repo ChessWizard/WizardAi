@@ -2,15 +2,18 @@
 
 namespace WizardAi.Core.Enums
 {
-    public enum PromptType
+    public enum TextPromptType
     {
-        [Display(Name = "Açıklama")]
+        [Display(Name = "Write")]
         None = 0,
         
-        [Display(Name = "Makale")]
+        [Display(Name = "Article")]
         Article = 1,
         
         [Display(Name = "Blog")]
-        Blog = 2
+        Blog = 2,
+
+        [Display(Name = "Summary")]
+        Summary = 3
     }
 }

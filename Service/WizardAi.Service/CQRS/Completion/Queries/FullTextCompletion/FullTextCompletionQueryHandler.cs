@@ -26,7 +26,7 @@ namespace WizardAi.Service.CQRS.Completion.Queries.FullTextCompletion
 
         public async Task<Result<FullTextCompletionQueryResult>> Handle(FullTextCompletionQuery request, CancellationToken cancellationToken)
         {
-            var prompt = new PromptBuilder()
+            var prompt = new TextPromptBuilder()
                 .SetSubject(request.Subject)
                 .SetDescription(request.Description)
                 .SetPromptType(request.PromptType)
@@ -36,7 +36,7 @@ namespace WizardAi.Service.CQRS.Completion.Queries.FullTextCompletion
 
             var completionRequest = CompletionHelper.GenerateCompletionRequestByCreativity(request.CreativityType, prompt);
 
-            var completion = await _openAiService.CreateTextCompletionsAsync(completionRequest, request.RequestedOption);
+            var completion = await _openAiService.CreateTextCompletionAsync(completionRequest, request.RequestedOption);
 
             if (completion is null || !completion.Completions.Any())
                 return Result<FullTextCompletionQueryResult>.Error("İsteğinize uygun bir cevap üretilemedi!", (int)HttpStatusCode.BadRequest);

@@ -33,14 +33,14 @@ namespace WizardAi.Service.CQRS.Completion.Commands.SpeechToTextCompletion
             if(string.IsNullOrWhiteSpace(audioText))
                 return Result<SpeechToTextCompletionCommandResult>.Error("İsteğinize uygun bir cevap üretilemedi!", (int)HttpStatusCode.BadRequest);
 
-            var prompt = new PromptBuilder()
+            var prompt = new TextPromptBuilder()
                 .SetSubject(audioText)
-                .SetPromptType(PromptType.None)
+                .SetPromptType(TextPromptType.None)
                 .Build();
 
             var completionRequest = CompletionHelper.GenerateCompletionRequestByCreativity(request.CreativityType, prompt);
 
-            var completion = await _openAiService.CreateTextCompletionsAsync(completionRequest);
+            var completion = await _openAiService.CreateTextCompletionAsync(completionRequest);
 
             if (completion is null || !completion.Completions.Any())
                 return Result<SpeechToTextCompletionCommandResult>.Error("İsteğinize uygun bir cevap üretilemedi!", (int)HttpStatusCode.BadRequest);

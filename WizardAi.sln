@@ -5,19 +5,23 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{39E1C571-0226-41A3-B74E-74F9445E65CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.API", "Presentation\WizardAi.API\WizardAi.API.csproj", "{60E27A3E-BB2B-4486-8D14-B490B64477A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WizardAi.API", "Presentation\WizardAi.API\WizardAi.API.csproj", "{60E27A3E-BB2B-4486-8D14-B490B64477A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9FCE74A3-70E1-4096-BB1B-FB26F56B26FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F94B7E8F-E5BA-4C45-A494-154B8DE7C9B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.Core", "Core\WizardAi.Core\WizardAi.Core.csproj", "{73291F67-0610-475D-B1CE-016C6C5C73C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WizardAi.Core", "Core\WizardAi.Core\WizardAi.Core.csproj", "{73291F67-0610-475D-B1CE-016C6C5C73C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.Data", "Data\WizardAi.Data\WizardAi.Data.csproj", "{92DBB6B6-CC9B-405D-A679-BFF19D80633B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WizardAi.Data", "Data\WizardAi.Data\WizardAi.Data.csproj", "{92DBB6B6-CC9B-405D-A679-BFF19D80633B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{999073D9-E7E9-4315-9A3B-6B1E0ED2D46A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.Service", "Service\WizardAi.Service\WizardAi.Service.csproj", "{42F9D584-53E5-4AAB-8198-35BB709853A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WizardAi.Service", "Service\WizardAi.Service\WizardAi.Service.csproj", "{42F9D584-53E5-4AAB-8198-35BB709853A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSocket", "WebSocket", "{77BE23D3-A5F6-414E-A74F-B6A1C3163391}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardAi.WebSocket", "WebSocket\WizardAi.WebSocket\WizardAi.WebSocket.csproj", "{96A45766-497F-43DF-9844-FFD0D56F8D82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{42F9D584-53E5-4AAB-8198-35BB709853A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42F9D584-53E5-4AAB-8198-35BB709853A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42F9D584-53E5-4AAB-8198-35BB709853A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A45766-497F-43DF-9844-FFD0D56F8D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A45766-497F-43DF-9844-FFD0D56F8D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A45766-497F-43DF-9844-FFD0D56F8D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A45766-497F-43DF-9844-FFD0D56F8D82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{73291F67-0610-475D-B1CE-016C6C5C73C8} = {9FCE74A3-70E1-4096-BB1B-FB26F56B26FD}
 		{92DBB6B6-CC9B-405D-A679-BFF19D80633B} = {F94B7E8F-E5BA-4C45-A494-154B8DE7C9B6}
 		{42F9D584-53E5-4AAB-8198-35BB709853A8} = {999073D9-E7E9-4315-9A3B-6B1E0ED2D46A}
+		{96A45766-497F-43DF-9844-FFD0D56F8D82} = {77BE23D3-A5F6-414E-A74F-B6A1C3163391}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB893481-856A-4E25-A890-C03FF616B948}

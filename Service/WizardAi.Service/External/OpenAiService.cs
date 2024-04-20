@@ -7,6 +7,7 @@ using System.Net.Http;
 using WizardAi.Core.External;
 using WizardAi.Service.Configurations;
 using OpenAI_API.Audio;
+using OpenAI_API.Images;
 
 namespace WizardAi.Service.External
 {
@@ -20,7 +21,15 @@ namespace WizardAi.Service.External
             _openAIAPI = new(_aiConfigurations.OpenAi.SecretKey);
         }
 
-        public async Task<CompletionResult> CreateTextCompletionsAsync(CompletionRequest request, int optionCount = 3)
+        public async Task<List<CompletionResult>> CreateStreamingCompletionAsync(CompletionRequest request)
+        {
+            List<CompletionResult> results = new();
+            await _openAIAPI.Completions
+                .StreamCompletionAsync(request, results.Add);
+            return results;
+        }
+
+        public async Task<CompletionResult> CreateTextCompletionAsync(CompletionRequest request, int optionCount = 3)
          => await _openAIAPI.Completions
             .CreateCompletionsAsync(request, optionCount);
 
@@ -32,5 +41,10 @@ namespace WizardAi.Service.External
 
             return audioDetails;
         }
+
+        public async Task<ImageResult> GenerateImageFromTextAsync(ImageGenerationRequest request)
+         => await _openAIAPI.ImageGenerations
+                .CreateImageAsync(request);
     }
+
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using WizardAi.Core.Enums;
 using WizardAi.Service.Result;
 
-namespace WizardAi.Service.CQRS.Completion.Queries.FullTextCompletion
+namespace WizardAi.Service.CQRS.Completion.Queries.FullTextStreamingCompletion
 {
-    public class FullTextCompletionQuery : IRequest<Result<FullTextCompletionQueryResult>>
+    public class FullTextStreamingCompletionQuery: IRequest<Result<FullTextStreamingCompletionQueryResult>>
     {
-        public string? Subject { get; set; }
+        public string Subject { get; set; }
 
         public string? Description { get; set; }
 
