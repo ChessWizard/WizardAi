@@ -9,8 +9,10 @@ using WizardAi.Service.Result;
 
 namespace WizardAi.Service.CQRS.Completion.Queries.FullTextStreamingCompletion
 {
-    public class FullTextStreamingCompletionQuery: IRequest<Result<FullTextStreamingCompletionQueryResult>>
+    public class FullTextStreamingCompletionQuery: IRequest<Result<Unit>>
     {
+        public string ConnectionId { get; set; }
+
         public string Subject { get; set; }
 
         public string? Description { get; set; }

@@ -1,4 +1,4 @@
-﻿using OpenAI_API.Completions;
+﻿using OpenAI_API.Chat;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,30 +8,24 @@ using WizardAi.Core.Enums;
 
 namespace WizardAi.Core.Helpers
 {
-    public static class CompletionHelper
+    public static class VisionHelper
     {
-        /// <summary>
-        /// Yaratıcılık düzeyine göre Completion oluşturur
-        /// </summary>
-        /// <param name="creativityType"></param>
-        /// <param name="maxTokens"></param>
-        /// <param name="prompt"></param>
-        /// <returns></returns>
-        public static CompletionRequest GenerateCompletionRequestByCreativity(CreativityType creativityType, string prompt, int maxTokens = 1000)
+        public static ChatRequest GenerateVisionRequestByCreativity(CreativityType creativityType, IList<ChatMessage> chatMessages, int requestedOption, int maxTokens = 1000)
         {
             var (Temperature, FrequencyPenalty, PresencePenalty) = GetCreativitySettings(creativityType);
 
-            CompletionRequest completionRequest = new()
+            ChatRequest chatRequest = new()
             {
-                Model = OpenAI_API.Models.Model.ChatGPTTurboInstruct,
+                Model = OpenAI_API.Models.Model.GPT4_Vision,
                 MaxTokens = maxTokens,
                 Temperature = Temperature,
                 FrequencyPenalty = FrequencyPenalty,
                 PresencePenalty = PresencePenalty,
-                Prompt = prompt,
+                Messages = chatMessages,
+                NumChoicesPerMessage = requestedOption
             };
 
-            return completionRequest;
+            return chatRequest;
         }
 
         private static (double Temperature, double FrequencyPenalty, double PresencePenalty) GetCreativitySettings(CreativityType creativityType)
@@ -45,4 +39,6 @@ namespace WizardAi.Core.Helpers
             };
         }
     }
+
+    
 }

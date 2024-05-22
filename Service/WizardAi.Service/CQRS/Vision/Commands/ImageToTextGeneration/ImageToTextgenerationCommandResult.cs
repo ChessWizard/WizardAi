@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using WizardAi.Core.Dto;
 
-namespace WizardAi.Service.CQRS.Completion.Queries.FullTextStreamingCompletion
+namespace WizardAi.Service.CQRS.Vision.Commands.ImageToTextGeneration
 {
-    public class FullTextStreamingCompletionQueryResult
+    public class ImageToTextgenerationCommandResult
     {
         public List<TextCompletionOptionDto> Options { get; set; }
     }
