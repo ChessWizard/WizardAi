@@ -21,6 +21,6 @@ namespace WizardAi.Service.CQRS.Vision.Commands.ImageToTextGeneration
         public List<string>? UrlImages { get; set; }
 
         [FromForm(Name = "files")]
-        public IFormFileCollection Files { get; set; }
+        public IFormFileCollection? Files { get; set; }
     }
 }
